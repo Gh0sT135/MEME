@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEME Конвертер валют</title>
+    <link rel="icon" href="/svg/EmojiMeme24Filled.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container converter-container">
+      <h1 class="text-center mb-4">🤑 MEME КОНВЕРТЕР ВАЛЮТ 🤑</h1>
+
+      <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+          <div class="card currency-card h-100">
+            <div
+              class="card-header"
+              style="background-color: #ff00aa; color: white"
+            >
+              USD 💵
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Доллар США</h5>
+              <p class="card-text">1.00 USD</p>
+              <span class="badge rate-badge" style="background-color: #00ffaa"
+                >1 USD = 78.99 RUB</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card currency-card h-100">
+            <div
+              class="card-header"
+              style="background-color: #00aaff; color: white"
+            >
+              EUR 💶
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Евро</h5>
+              <p class="card-text">0.88 EUR</p>
+              <span class="badge rate-badge" style="background-color: #ffaa00"
+                >1 EUR = 89.76 RUB</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card currency-card h-100">
+            <div
+              class="card-header"
+              style="background-color: #f7931a; color: white"
+            >
+              ₿ Bitcoin
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bitcoin</h5>
+              <p class="card-text">0.000042 BTC</p>
+              <span class="badge rate-badge" style="background-color: #ffcc00"
+                >1 BTC = $69,420.00</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card currency-card mb-4" style="transform: none">
+        <div class="card-body">
+          <form>
+            <div class="row align-items-center">
+              <div class="col-md-5 mb-3">
+                <label for="fromCurrency" class="form-label fw-bold"
+                  >💸 ОТДАЮ:</label
+                >
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="amount"
+                    value="100.00"
+                    step="0.01"
+                    style="font-weight: bold"
+                  />
+                  <select
+                    class="form-select"
+                    id="fromCurrency"
+                    style="font-weight: bold"
+                  >
+                    <option value="USD" selected>USD - Доллар США 💵</option>
+                    <option value="EUR">EUR - Евро 💶</option>
+                    <option value="BTC">BTC - Bitcoin ₿</option>
+                    <option value="RUB">RUB - Российский рубль ₽</option>
+                    <option value="KZT">KZT - Казахстанский тенге ₸</option>
+                    <option value="PEPE">PEPE - Pepe Coin 🐸</option>
+                    <option value="DOGE">DOGE - Dogecoin Ð</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-2 text-center mb-3">
+                <button
+                  type="button"
+                  class="btn btn-outline-dark exchange-icon"
+                  style="border-width: 3px"
+                >
+                  🔄
+                </button>
+              </div>
+
+              <div class="col-md-5 mb-3">
+                <label for="toCurrency" class="form-label fw-bold"
+                  >💰 ПОЛУЧАЮ:</label
+                >
+                <div class="input-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="convertedAmount"
+                    readonly
+                    style="font-weight: bold"
+                  />
+                  <select
+                    class="form-select"
+                    id="toCurrency"
+                    style="font-weight: bold"
+                  >
+                    <option value="USD">USD - Доллар США 💵</option>
+                    <option value="EUR">EUR - Евро 💶</option>
+                    <option value="BTC">BTC - Bitcoin ₿</option>
+                    <option value="RUB" selected>
+                      RUB - Российский рубль ₽
+                    </option>
+                    <option value="KZT">KZT - Казахстанский тенге ₸</option>
+                    <option value="PEPE">PEPE - Pepe Coin 🐸</option>
+                    <option value="DOGE">DOGE - Dogecoin Ð</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-meme btn-lg">
+                КОНВЕРТИРОВАТЬ В МЕМНЫХ ВАЛЮТАХ!
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card currency-card h-100">
+            <div
+              class="card-header"
+              style="background-color: #ff5500; color: white"
+            >
+              RUB ₽
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Российский рубль</h5>
+              <p class="card-text">78.99 RUB</p>
+              <span class="badge rate-badge" style="background-color: #55ff00"
+                >1 RUB = 0.013 USD</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card currency-card h-100">
+            <div
+              class="card-header"
+              style="background-color: #00ff55; color: white"
+            >
+              KZT ₸
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Казахстанский тенге</h5>
+              <p class="card-text">510.05 KZT</p>
+              <span class="badge rate-badge" style="background-color: #5500ff"
+                >1 KZT = 0.0020 USD</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card currency-card h-100">
+            <div
+              class="card-header"
+              style="background-color: #45c527; color: white"
+            >
+              🐸 Pepe Coin
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Pepe Coin</h5>
+              <p class="card-text">1,000,000 PEPE</p>
+              <span class="badge rate-badge" style="background-color: #27c54a"
+                >1 PEPE = $0.000001</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meme-watermark">MEME CONVERTER TO THE CARD! 💳</div>
+
+    <img
+      src="/svg/1.png"
+      alt="Doge"
+      class="floating-doge d-none d-md-block"
+      
+    />
+    <img
+      src="/svg/пепе.png"
+      alt="Pepe"
+      class="floating-pepe d-none d-md-block"
+    />
+    
+  </body>
+</html>
