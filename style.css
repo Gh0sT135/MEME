@@ -1,26 +1,100 @@
 body {
-            background-color: #f8f9fa;
-        }
-        .currency-card {
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .currency-card:hover {
-            transform: translateY(-5px);
-        }
-        .converter-container {
-            max-width: 600px;
-            margin-top: 30px;
-        }
-        .exchange-icon {
-            font-size: 24px;
-            color: #0d6efd;
-        }
-        .rate-badge {
-            font-size: 0.9rem;
-        }
-        h1 {
-            color: #0d6efd;
-            margin-bottom: 30px;
-        }
+  background-color: #fffb00;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.currency-card {
+  border-radius: 10px;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  border: 3px solid #000;
+  background-color: white;
+}
+
+.currency-card:hover {
+  transform: rotate(-5deg) scale(1.05);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.3);
+}
+.converter-container {
+  max-width: 700px;
+  margin-top: 20px;
+}
+.exchange-icon {
+  font-size: 30px;
+  color: #ff00aa;
+}
+.rate-badge {
+  font-size: 0.9rem;
+  border: 2px dashed #000;
+}
+h1 {
+  color: #ff00aa;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.btn-meme {
+  background-color: #ff00aa;
+  color: white;
+  border: 3px solid #000;
+  font-weight: bold;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  border-bottom: 3px solid #000 !important;
+  font-weight: 900;
+}
+.meme-watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff00aa;
+  text-shadow: 2px 2px 0px #000;
+  transform: rotate(-10deg);
+}
+select,
+input {
+  border: 2px solid #000 !important;
+}
+.floating-doge {
+  position: fixed;
+  width: 100px;
+  bottom: 20px;
+  left: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+.floating-pepe {
+  position: fixed;
+  width: 80px;
+  bottom: 150px;
+  left: 20px;
+  animation: float 4s ease-in-out infinite 1s;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+}
+.meme-watermark {
+  position: -webkit-sticky;
+  top: 90%;
+}
+.floating-doge{
+    width: 200 px;
+    height: auto;
+
+}
+.floating-pepe{
+    width: 200 px;
+    height: auto;
+}
