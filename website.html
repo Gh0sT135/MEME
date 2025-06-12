@@ -16,6 +16,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+
+    <script src="/script.js"></script>
+    <!-- <script src="/api.js"></script> -->
+    
     <div class="container converter-container">
       <h1 class="text-center mb-4">🤑 MEME КОНВЕРТЕР ВАЛЮТ 🤑</h1>
 
@@ -31,7 +35,7 @@
             <div class="card-body">
               <h5 class="card-title">Доллар США</h5>
               <p class="card-text">1.00 USD</p>
-              <span class="badge rate-badge" style="background-color: #00ffaa"
+              <span class="badge rate-badge" style="background-color: #00ffaa" id="usd-to-rub"
                 >1 USD = 78.99 RUB</span
               >
             </div>
@@ -86,7 +90,7 @@
                     type="number"
                     class="form-control"
                     id="amount"
-                    value="100.00"
+                    value="1"
                     step="0.01"
                     style="font-weight: bold"
                   />
@@ -99,7 +103,6 @@
                     <option value="EUR">EUR - Евро 💶</option>
                     <option value="BTC">BTC - Bitcoin ₿</option>
                     <option value="RUB">RUB - Российский рубль ₽</option>
-                    <option value="KZT">KZT - Казахстанский тенге ₸</option>
                     <option value="PEPE">PEPE - Pepe Coin 🐸</option>
                     <option value="DOGE">DOGE - Dogecoin Ð</option>
                   </select>
@@ -139,7 +142,6 @@
                     <option value="RUB" selected>
                       RUB - Российский рубль ₽
                     </option>
-                    <option value="KZT">KZT - Казахстанский тенге ₸</option>
                     <option value="PEPE">PEPE - Pepe Coin 🐸</option>
                     <option value="DOGE">DOGE - Dogecoin Ð</option>
                   </select>
@@ -183,10 +185,10 @@
               KZT ₸
             </div>
             <div class="card-body">
-              <h5 class="card-title">Казахстанский тенге</h5>
-              <p class="card-text">510.05 KZT</p>
+              <h5 class="card-title">Doge coin</h5>
+              <p class="card-text">DOGE - Dogecoin Ð</p>
               <span class="badge rate-badge" style="background-color: #5500ff"
-                >1 KZT = 0.0020 USD</span
+                >1 DOGE  = 0.1186 USD</span
               >
             </div>
           </div>
@@ -213,17 +215,11 @@
 
     <div class="meme-watermark">MEME CONVERTER TO THE CARD! 💳</div>
 
-    <img
-      src="/svg/1.png"
-      alt="Doge"
-      class="floating-doge d-none d-md-block"
-      
-    />
+    <img src="/svg/1.png" alt="Doge" class="floating-doge d-none d-md-block" />
     <img
       src="/svg/пепе.png"
       alt="Pepe"
       class="floating-pepe d-none d-md-block"
     />
-    
   </body>
 </html>
