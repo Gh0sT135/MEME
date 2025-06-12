@@ -50,13 +50,37 @@ const exchangeRates = {
   },
   DOGE: {
     RUB: 8333.33,
-    USD: 0.00012,
+    USD: 0.0012,
     EUR: 0.0001,
     BTC: 0.00000015,
     KZT: 0.00000025,
     PEPE: 10000000,
   },
 };
+
+// Обновляем все отображаемые курсы (именно на карточках) динамически
+function updateExchangeRateDisplays() {
+  
+  document.getElementById('usd-to-rub').textContent = `1 USD = ${exchangeRates.USD.RUB} RUB`;
+  document.getElementById('eur-to-rub').textContent = `1 EUR = ${exchangeRates.EUR.RUB} RUB`;
+  document.getElementById('btc-to-usd').textContent = `1 BTC = $${exchangeRates.BTC.USD.toFixed(2)}`;  // только 2 знака после запятой
+  document.getElementById('rub-to-usd').textContent = `1 RUB = ${exchangeRates.RUB.USD} USD`;
+  document.getElementById('doge-to-usd').textContent = `1 DOGE = ${exchangeRates.DOGE.USD} USD`;
+  document.getElementById('pepe-to-usd').textContent = `1 PEPE = $${exchangeRates.PEPE.USD}`;
+}
+
+
+// вызываем функцию апдейта при загрузке странички
+document.addEventListener("DOMContentLoaded", function () {
+  updateExchangeRateDisplays(); // Обновляем отображение курсов
+  
+  document
+    .querySelector(".btn-meme")
+    .addEventListener("click", convertCurrency);
+  document
+    .querySelector(".exchange-icon")
+    .addEventListener("click", swapCurrencies);
+});
 
 
 
